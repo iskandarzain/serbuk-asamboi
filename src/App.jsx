@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import HowToEnjoy from './components/HowToEnjoy';
 import Features from './components/Features';
 import Pricing from './components/Pricing';
+import PaymentForm from './components/PaymentForm';
 import Urgency from './components/Urgency';
 import Testimonial from './components/Testimonial';
 import FinalCta from './components/FinalCta';
@@ -21,6 +22,7 @@ export default function App() {
       <HowToEnjoy />
       <Features />
       <Pricing ctaLink={CTA_LINK} />
+      <PaymentForm />
       <Urgency />
       <Testimonial />
       <FinalCta />

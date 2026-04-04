@@ -1,11 +1,14 @@
+import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import HowToEnjoy from './components/HowToEnjoy';
 import Features from './components/Features';
+import Pricing from './components/Pricing';
 import Urgency from './components/Urgency';
 import Testimonial from './components/Testimonial';
 import FinalCta from './components/FinalCta';
 import StickyBar from './components/StickyBar';
 import Particles from './components/Particles';
+import Footer from './components/Footer';
 
 const CTA_LINK = '#order';
 
@@ -13,12 +16,15 @@ export default function App() {
   return (
     <>
       <Particles />
+      <Navbar />
       <Hero ctaLink={CTA_LINK} />
       <HowToEnjoy />
       <Features />
+      <Pricing ctaLink={CTA_LINK} />
       <Urgency />
       <Testimonial />
-      <FinalCta ctaLink={CTA_LINK} />
+      <FinalCta />
+      <Footer />
       <StickyBar ctaLink={CTA_LINK} />
     </>
   );

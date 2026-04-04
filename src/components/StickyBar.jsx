@@ -16,12 +16,12 @@ export default function StickyBar({ ctaLink }) {
     <div className={`sticky-bar ${visible ? 'visible' : ''}`} id="sticky-bar">
       <div className="sticky-bar-content">
         <div className="sticky-bar-text">
-          <p>NAK CUBA? 🔥</p>
-          <p>Jangan tunggu viral baru nak beli!</p>
+          <p>🔥 STOK TERHAD!</p>
+          <p>RM10.90 je sebalang — grab sekarang!</p>
         </div>
 
         <a href={ctaLink} className="cta-button" id="sticky-cta">
-          KLIK SEKARANG! 🛒
+          ORDER SEKARANG! 🛒
         </a>
       </div>
     </div>

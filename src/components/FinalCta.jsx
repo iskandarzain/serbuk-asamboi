@@ -1,21 +1,36 @@
+import { useEffect } from 'react';
 import useReveal from '../hooks/useReveal';
 
-export default function FinalCta({ ctaLink }) {
+export default function FinalCta() {
   const ref = useReveal();
+
+  useEffect(() => {
+    const id = 'bcl-embed-script';
+    if (document.getElementById(id)) return;
+
+    const script = document.createElement('script');
+    script.id = id;
+    script.src = 'https://bcl.my/js/bc-encrypted-payment-embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
 
   return (
     <section className="final-cta reveal" ref={ref} id="order">
       <h2 className="section-title">
-        NAK <span className="accent">CUBA?</span>
+        NAK <span className="accent">ORDER?</span>
       </h2>
 
       <p className="final-cta-sub">
-        Jangan tunggu viral baru nak beli! 🔥
+        Isi borang di bawah untuk tempah sekarang! 🔥
       </p>
 
-      <a href={ctaLink} className="cta-button" id="final-cta">
-        KLIK LINK SEKARANG! 🛒
-      </a>
+      <div className="bcl-form-wrapper">
+        <div
+          id="bcl-payment-form"
+          data-url="https://tart-premium-aiditnoh.bcl.my/embed/form/serbuk-asamboi"
+        />
+      </div>
     </section>
   );
 }

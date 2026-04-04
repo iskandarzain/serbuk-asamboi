@@ -5,21 +5,25 @@ const FEATURES = [
     icon: '💧',
     text: 'RASA PADU SAMPAI ',
     highlight: 'BERAIR MULUT',
+    color: '#ffd600',
   },
   {
     icon: '✨',
     text: 'SERBUK HALUS, ',
     highlight: 'MUDAH LEKAT KAT BUAH',
+    color: '#ff9800',
   },
   {
     icon: '⚖️',
     text: 'BALANCE MASAM MANIS, ',
     highlight: 'TAK MUAK',
+    color: '#4caf50',
   },
   {
     icon: '🔁',
     text: 'CONFIRM ',
     highlight: 'REPEAT ORDER!',
+    color: '#e63946',
   },
 ];
 
@@ -50,6 +54,7 @@ function FeatureCard({ feature, delay }) {
     <div
       className={`feature-card reveal reveal-delay-${delay}`}
       ref={ref}
+      style={{ '--card-accent': feature.color }}
     >
       <div className="feature-icon">{feature.icon}</div>
       <p className="feature-text">

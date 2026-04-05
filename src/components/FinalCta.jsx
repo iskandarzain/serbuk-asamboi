@@ -28,7 +28,7 @@ export default function FinalCta() {
       <div className="bcl-form-wrapper">
         <div
           id="bcl-payment-form"
-          data-url="https://tart-premium-aiditnoh.bcl.my/embed/form/serbuk-asamboi"
+          data-url="https://aiditnoh.bcl.my/embed/form/serbuk-asamboi"
         />
       </div>
     </section>

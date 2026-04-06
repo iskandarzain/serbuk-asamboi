@@ -22,7 +22,7 @@ export default function FinalCta() {
       </h2>
 
       <p className="final-cta-sub">
-        Isi borang di bawah untuk tempah sekarang! 🔥
+        Isi borang di bawah untuk tempah sekarang!
       </p>
 
       <div className="bcl-form-wrapper">

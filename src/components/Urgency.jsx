@@ -1,3 +1,4 @@
+import { AlertTriangle } from 'lucide-react';
 import useReveal from '../hooks/useReveal';
 
 export default function Urgency() {
@@ -7,7 +8,8 @@ export default function Urgency() {
     <section className="urgency" id="urgency">
       <div className="urgency-banner reveal" ref={ref}>
         <div className="urgency-stamp">
-          <span className="urgency-stamp-text">🚨 STOK BATCH NI</span>
+          <AlertTriangle size={22} aria-hidden="true" />
+          <span className="urgency-stamp-text">STOK BATCH NI</span>
         </div>
 
         <h2 className="urgency-limited">LIMITED!</h2>
@@ -16,7 +18,7 @@ export default function Urgency() {
           Ramai dah repeat sebab{' '}
           <strong>&ldquo;LAIN DARI YANG LAIN&rdquo;</strong>
           <br />
-          Jangan menyesal kalau habis stok! 🏃‍♂️💨
+          Jangan menyesal kalau habis stok!
         </p>
       </div>
     </section>

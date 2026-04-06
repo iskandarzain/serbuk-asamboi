@@ -1,3 +1,4 @@
+import { ShoppingCart, Flame, BadgeDollarSign } from 'lucide-react';
 import useReveal from '../hooks/useReveal';
 
 const PLANS = [
@@ -7,6 +8,7 @@ const PLANS = [
     price: '10.90',
     perUnit: null,
     tag: null,
+    tagIcon: null,
     popular: false,
   },
   {
@@ -14,7 +16,8 @@ const PLANS = [
     qty: '3 Balang',
     price: '28.90',
     perUnit: 'RM9.63 / balang',
-    tag: '🔥 PALING POPULAR',
+    tag: 'PALING POPULAR',
+    tagIcon: Flame,
     popular: true,
   },
   {
@@ -22,7 +25,8 @@ const PLANS = [
     qty: '5 Balang',
     price: '45.90',
     perUnit: 'RM9.18 / balang',
-    tag: '💰 JIMAT GILA',
+    tag: 'JIMAT GILA',
+    tagIcon: BadgeDollarSign,
     popular: false,
   },
 ];
@@ -48,13 +52,19 @@ export default function Pricing({ ctaLink }) {
 
 function PricingCard({ plan, delay, ctaLink }) {
   const ref = useReveal();
+  const TagIcon = plan.tagIcon;
 
   return (
     <div
       className={`pricing-card ${plan.popular ? 'popular' : ''} reveal reveal-delay-${delay}`}
       ref={ref}
     >
-      {plan.tag && <span className="pricing-tag">{plan.tag}</span>}
+      {plan.tag && (
+        <span className="pricing-tag">
+          {TagIcon && <TagIcon size={13} aria-hidden="true" />}
+          {plan.tag}
+        </span>
+      )}
       <h3 className="pricing-name">{plan.name}</h3>
       <p className="pricing-qty">{plan.qty}</p>
       <div className="pricing-price">
@@ -66,7 +76,8 @@ function PricingCard({ plan, delay, ctaLink }) {
         href={ctaLink}
         className={`cta-button ${!plan.popular ? 'cta-outline' : ''}`}
       >
-        BELI SEKARANG 🛒
+        <ShoppingCart size={18} aria-hidden="true" />
+        BELI SEKARANG
       </a>
     </div>
   );
